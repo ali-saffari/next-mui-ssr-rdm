@@ -16,7 +16,7 @@ async function start() {
       const pathName = req.originalUrl;
 
 
-      console.log("pathName" , pathName)
+      // console.log("pathName" , pathName)
 
       if (isInternalUrl(req.url)) {
         return app.handleRequest(req, res, req.originalUrl)
