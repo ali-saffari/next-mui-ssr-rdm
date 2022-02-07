@@ -1,6 +1,10 @@
 import { Route, Link, Switch } from "react-router-dom";
 import { Redirect } from 'react-router'
+import dynamic from "next/dynamic";
 
+const Users = dynamic(() => import("../src/test"), {
+  loading: () => <p>Loading...</p>
+});
 function Status({ code, children }) {
   return (
     <Route
@@ -20,9 +24,7 @@ function About() {
   return <h2>About</h2>;
 }
 
-function Users() {
-  return <h2>Users</h2>;
-}
+
 
 function NotFound() {
   return (
@@ -34,6 +36,8 @@ function NotFound() {
 }
 
 function App() {
+
+  // var gwetasdf();
   return(
     <div>
       <h1>Welcome to Next.js!</h1>
@@ -43,7 +47,10 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about/">About</Link>
+            <Link to="/about/">About
+
+            </Link>
+
           </li>
           <li>
             <Link to="/users/">Users</Link>

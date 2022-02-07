@@ -11,6 +11,7 @@
     "test": "echo \"No test specified\"",
     "start": "node server.js",
     "build": "next build",
+    "dev": "next dev",
     "serve": "NODE_ENV=production node server.js"
   },
   "keywords": [],
@@ -21,8 +22,10 @@
   "author": "Andrea Carraro <me@andreacarraro.it>",
   "license": "ISC",
   "dependencies": {
+    "browserslist": "^4.19.1",
     "express": "^4.17.1",
     "next": "^9.3.2",
+    "next-server": "^9.0.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",

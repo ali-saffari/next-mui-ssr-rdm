@@ -14,6 +14,10 @@ async function start() {
       // @NOTE code duplication from here
       // https://github.com/zeit/next.js/blob/cc6fe5fdf92c9c618a739128fbd5192a6d397afa/packages/next-server/server/next-server.ts#L405
       const pathName = req.originalUrl;
+
+
+      console.log("pathName" , pathName)
+
       if (isInternalUrl(req.url)) {
         return app.handleRequest(req, res, req.originalUrl)
       }
@@ -28,6 +32,7 @@ async function start() {
       req.locals.context = {};
       const html = await app.renderToHTML(req, res, '/', {});
 
+      var a = 0;
       // Handle client redirects
       const context = req.locals.context;
       if (context.url) {
